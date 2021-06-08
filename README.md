@@ -3,6 +3,8 @@ SmartFoxServer 2X Haxe Client API
 
 This fork adds support for encrypted connections + other improvements. Pull requests are welcome!
 
+Platforms
+====
 |Platform|Support|
 |--|--|
 |HTML5|WS/WSS|
