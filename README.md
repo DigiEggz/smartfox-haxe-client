@@ -47,7 +47,7 @@ Add the following line to your project.xml:
 Usage is very similar to the AS3 API. Check out AS3 examples here:    
 http://docs2x.smartfoxserver.com/ExamplesFlash/introduction    
   
-TODO:  
+To-do
 ====
 * test app   
 * improve typing
