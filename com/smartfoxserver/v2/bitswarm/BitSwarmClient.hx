@@ -610,6 +610,11 @@ class BitSwarmClient extends EventDispatcher
 	private function onSocketIOError(evt:IOErrorEvent):Void
 	{
 		processIOError(evt.toString());
+
+		// Android _socket not receiving Event.CLOSE; manually disconnect on I/O error
+		#if android
+		disconnect();
+		#end
 	}
 
 	private function onSocketSecurityError(evt:SecurityErrorEvent):Void
