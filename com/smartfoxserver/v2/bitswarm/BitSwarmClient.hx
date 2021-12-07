@@ -382,7 +382,12 @@ class BitSwarmClient extends EventDispatcher
 	*/
 	public function killConnection():Void
 	{
-		_socket.close();
+		if(_wsClient.connected)
+			_wsClient.close();
+
+		if(_socket.connected)
+			_socket.close();
+        
 		onSocketClose(new Event(Event.CLOSE));
 	}
 
