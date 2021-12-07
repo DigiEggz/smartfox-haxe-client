@@ -1440,6 +1440,7 @@ class SystemController extends BaseController
 				if(removedUser !=null)
 				{
 					theRoom.removeUser(removedUser);
+                    sfs.userManager.removeUser(removedUser);
 					removedUsers.push(removedUser);
 				}
 			}
