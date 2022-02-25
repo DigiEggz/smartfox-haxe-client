@@ -16,7 +16,7 @@ import openfl.utils.Endian;
 
 /**
  * ...
- * @author vincent blanchet
+ * @author vincent blanchet, Metlmeta
  */
 class CryptoInitializer
 {
@@ -84,10 +84,17 @@ class CryptoInitializer
 		key.writeBytes(byteData, 0, 16);
 		iv.writeBytes(byteData, 16, 16);
 
-		sfs.socketEngine.cryptoKey = new CryptoKey(iv, key);
-		sfs.socketEngine.cipher = new Aes(key, iv);
+		// Make sure key and IV are valid
+		if(key.length > 0 && iv.length > 0)
+		{
+			sfs.socketEngine.cryptoKey = new CryptoKey(iv, key);
+			sfs.socketEngine.cipher = new Aes(key, iv);
+			sfs.dispatchEvent( new SFSEvent(SFSEvent.CRYPTO_INIT, { success:true }) );
+		}
+		else
+			sfs.dispatchEvent( new SFSEvent(SFSEvent.CRYPTO_INIT, { success:false }) );
 
-		sfs.dispatchEvent( new SFSEvent(SFSEvent.CRYPTO_INIT, { success:true }) );
+		
 	}
 
 	private function onHttpIOError(evt:IOErrorEvent):Void
