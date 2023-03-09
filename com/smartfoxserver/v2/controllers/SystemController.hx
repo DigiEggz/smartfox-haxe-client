@@ -359,7 +359,7 @@ class SystemController extends BaseController
 
 			// remove from global user manager
 			var globalUserMan:SFSGlobalUserManager = cast sfs.userManager;
-			globalUserMan.removeUserReference(user, true);
+			globalUserMan.removeUser(user);
 
 			// Fire one event in each room
 			for(room in joinedRooms)

@@ -38,11 +38,6 @@ class SFSGlobalUserManager extends SFSUserManager
 	
 	override public function removeUser(user:User):Void
 	{
-		removeUserReference(user, false);
-	}
-	
-	public function removeUserReference(user:User, disconnected:Bool=false):Void
-	{
 		if(_roomRefCount !=null)
 		{
 			/* Debug Only */
@@ -55,7 +50,7 @@ class SFSGlobalUserManager extends SFSUserManager
 			var newCount = _roomRefCount.get(user) - 1;
 			_roomRefCount.set(user, newCount);
 			
-			if(_roomRefCount.get(user)==0 || disconnected)
+			if(_roomRefCount.get(user)==0)
 			{
 				super.removeUser(user);
 				_roomRefCount.remove(user);
@@ -63,10 +58,5 @@ class SFSGlobalUserManager extends SFSUserManager
 		}
 		else
 			_smartFox.logger.warn("Can't remove User from GlobalUserManager. RefCount missing. User:" + user);
-	}
-	
-	private function dumpRefCount():Void
-	{
-		//for(var	
 	}
 }
