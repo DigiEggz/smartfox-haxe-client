@@ -359,7 +359,7 @@ class SystemController extends BaseController
 
 			// remove from global user manager
 			var globalUserMan:SFSGlobalUserManager = cast sfs.userManager;
-			globalUserMan.removeUser(user);
+			globalUserMan.removeUserReference(user, true);
 
 			// Fire one event in each room
 			for(room in joinedRooms)
@@ -566,7 +566,7 @@ class SystemController extends BaseController
 				if(!room.isManaged)
 					sfs.roomManager.removeRoom(room);
 
-				// Clear the players already joined in the room
+				// Clear the players already joined in the room.
 				for(roomUser in room.userList)
 				{
 					room.removeUser(roomUser);
@@ -1440,7 +1440,6 @@ class SystemController extends BaseController
 				if(removedUser !=null)
 				{
 					theRoom.removeUser(removedUser);
-					sfs.userManager.removeUser(removedUser);
 					removedUsers.push(removedUser);
 				}
 			}
@@ -1520,7 +1519,7 @@ class SystemController extends BaseController
 		evtParams.removedItems=removedItems;
 		evtParams.removedUsers=removedUsers;
 		evtParams.addedUsers=addedUsers;
-		evtParams.room=mmoRoom;
+		evtParams.room=cast(theRoom, MMORoom);
 		
 		sfs.dispatchEvent(new SFSEvent(SFSEvent.PROXIMITY_LIST_UPDATE, evtParams));
 	}
