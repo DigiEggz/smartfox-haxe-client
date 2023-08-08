@@ -8,6 +8,10 @@ import com.smartfoxserver.v2.util.CryptoKey;
 import flash.errors.IllegalOperationError;
 import flash.utils.ByteArray;
 
+import haxe.crypto.Aes;
+import haxe.crypto.mode.Mode;
+import openfl.utils.Endian;
+
 class DefaultPacketEncrypter implements IPacketEncrypter
 {
 	private var bitSwarm:BitSwarmClient;
