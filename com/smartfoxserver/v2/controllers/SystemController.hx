@@ -1512,7 +1512,7 @@ class SystemController extends BaseController
 		evtParams.removedItems=removedItems;
 		evtParams.removedUsers=removedUsers;
 		evtParams.addedUsers=addedUsers;
-		evtParams.room=cast(theRoom, MMORoom);
+		evtParams.room=mmoRoom;
 		
 		sfs.dispatchEvent(new SFSEvent(SFSEvent.PROXIMITY_LIST_UPDATE, evtParams));
 	}
