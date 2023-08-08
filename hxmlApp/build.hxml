@@ -1,6 +1,6 @@
 -cp src
 -dce full
--lib haxe-crypto
+-lib crypto
 -lib colyseus-websocket
 #-lib hxssl
 #-lua bin/lua.lua
