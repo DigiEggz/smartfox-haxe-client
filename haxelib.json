@@ -7,8 +7,8 @@
     ],
     "description": "Unofficial Haxe client for SmartFoxServer 2X 🦊",
     "contributors": [
-        "boorik <Vincent Blanchet>",
-		"barisyild <Baris Cagri Yildirim>",
+        "Vincent Blanchet",
+	"barisyild <Baris Cagri Yildirim>",
         "dpomier <Dimitri Pomier>",
         "DigiEggz"
     ],
