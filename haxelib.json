@@ -6,7 +6,7 @@
         "server",
 	"openfl"
     ],
-    "description": "Unofficial Haxe client for SmartFoxServer 2X 🦊",
+    "description": "Unofficial Haxe client for SmartFoxServer 2X",
     "contributors": [
 	"DigiEggz",
 	"barisyild",
