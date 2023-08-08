@@ -2,8 +2,9 @@
     "name": "smartfox-haxe-client",
     "license": "MIT",
     "tags": [
-        "openfl",
-        "server"
+        "smartfox",
+        "server",
+	"openfl"
     ],
     "description": "Unofficial Haxe client for SmartFoxServer 2X 🦊",
     "contributors": [
