@@ -12,7 +12,10 @@ class SFSError extends Error
 		_details=extra;
 	}
 	
+    #if (openfl <= "9.1.0")
 	public var details(get, null):String;
+    #end
+        
  	private function get_details():String
 	{
 		return _details;
