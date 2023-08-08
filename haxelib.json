@@ -5,14 +5,16 @@
         "openfl",
         "server"
     ],
-    "description": "use smartfox in your haxe project",
+    "description": "Unofficial SmartFox client API",
     "contributors": [
         "boorik <Vincent Blanchet>",
-		"barisyild <Baris Cagri Yildirim>"
+		"barisyild <Baris Cagri Yildirim>",
+        "dpomier <Dimitri Pomier>",
+        "Metlmeta"
     ],
-    "releasenote": "thread fix",
-    "version": "0.2.3",
-    "url": "https://github.com/barisyild/smartfox-haxe-client",
+    "releasenote": "Encryption support",
+    "version": "0.2.4",
+    "url": "https://github.com/Metlmeta/smartfox-haxe-client",
     "dependencies": {
 		"crypto":"",
 		"colyseus-websocket":"",
