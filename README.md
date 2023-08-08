@@ -17,19 +17,6 @@ Platforms
 |iOS|Socket/BlueBox|
 |Neko|Socket/BlueBox|
 |Emscripten|Untested|
-
-Currently works with:  
-----------------------------------  
-
-haxe: 4.2.2
-    
-lime: 7.9.0  
-    
-openfl: 9.1.0  
-    
-crypto: 1.0.2  
-  
-colyseus-websocket: 1.0.10
     
 ----------------------------------    
     
