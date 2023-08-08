@@ -22,7 +22,7 @@ Instructions
 =====  
 Installation: 
 ```
-haxelib git smartfox-haxe-client https://github.com/Metlmeta/smartfox-haxe-client.git
+haxelib git smartfox-haxe-client https://github.com/DigiEggz/smartfox-haxe-client.git
 ```    
 
 Add the following line to your project.xml:    
