@@ -1,5 +1,6 @@
 package com.smartfoxserver.v2.entities.managers;
 import com.smartfoxserver.v2.SmartFox;
+import com.smartfoxserver.v2.entities.MMORoom;
 import com.smartfoxserver.v2.entities.Room;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.util.ArrayUtil;
@@ -310,6 +311,9 @@ class SFSRoomManager implements IRoomManager
 		// Cycle through all Rooms
 		for (room in _roomsById)
 		{
+			if(Std.isOfType(room, MMORoom))
+				continue;
+
 			if(room.containsUser(user))
 				room.removeUser(user);
 		}	
