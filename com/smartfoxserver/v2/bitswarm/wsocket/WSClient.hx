@@ -1,4 +1,4 @@
-package com.smartfoxserver.v2.bitswarm.wsocket;
+﻿package com.smartfoxserver.v2.bitswarm.wsocket;
 
 import openfl.events.Event;
 import openfl.Lib;
@@ -21,8 +21,8 @@ class WSClient extends EventDispatcher
 	public function new(debug : Bool = false)
 	{
 		super();
-        
-        #if (target.threaded)
+
+		#if (target.threaded)
 			Lib.current.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		#end
 	}
@@ -31,7 +31,6 @@ class WSClient extends EventDispatcher
 	{
 		if (ws == null)
 			return false;
-        
 		return _connected;
 	}
 
@@ -70,9 +69,9 @@ class WSClient extends EventDispatcher
 				data : ByteArray.fromBytes(bytes)
 			}));
 		};
-		ws.onclose = function(?e:Null<Dynamic>) {
-            if(!_connected)
-                return;
+		ws.onclose = function() {
+			if(!_connected)
+				return;
 			_connected = false;
 			dispatchEvent(new WSEvent(WSEvent.CLOSED, { }));
 		};
@@ -87,8 +86,8 @@ class WSClient extends EventDispatcher
 
 	private function onEnterFrame(e:Event):Void
 	{
-        if(ws != null)
-		  ws.process();
+		if(ws != null)
+			ws.process();
 	}
 
 	public function send(binData : ByteArray) : Void
@@ -99,8 +98,8 @@ class WSClient extends EventDispatcher
 
 	public function close(manual:Bool = false) : Void
 	{
-        _connected = false;
-        ws.close();
+		_connected = false;
+		ws.close();
 	}
 }
 
