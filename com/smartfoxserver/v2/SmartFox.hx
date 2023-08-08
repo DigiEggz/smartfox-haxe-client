@@ -887,6 +887,12 @@ class SmartFox extends EventDispatcher
 	"Linux"
 	#elseif windows
 	"Windows"
+	#elseif mac
+	"macOS"
+	#elseif ios
+	"iOS"
+	#elseif android
+	"Android"
 	#elseif html5
 	"JavaScript"
 	#else
