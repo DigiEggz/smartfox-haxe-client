@@ -7,16 +7,16 @@
     ],
     "description": "Unofficial Haxe client for SmartFoxServer 2X 🦊",
     "contributors": [
-	"barisyild <Baris Cagri Yildirim>",
-        "dpomier <Dimitri Pomier>",
+	"barisyild",
+        "dpomier",
         "DigiEggz"
     ],
     "releasenote": "First stable release",
     "version": "1.0.0",
     "url": "https://github.com/DigiEggz/smartfox-haxe-client",
     "dependencies": {
-		"crypto":"",
-		"colyseus-websocket":"",
+	"crypto":"",
+	"colyseus-websocket":"",
         "openfl":""
     }
 }
