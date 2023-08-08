@@ -31,6 +31,7 @@ class DefaultPacketEncrypter implements IPacketEncrypter
 	public function decrypt(data:ByteArray):Void
 	{
 		// Continually write decrypted data into ByteArray
+		data.position = 0;
 		data.writeBytes(bitSwarm.cipher.decrypt(Mode.CBC, data));
 	}
 }
