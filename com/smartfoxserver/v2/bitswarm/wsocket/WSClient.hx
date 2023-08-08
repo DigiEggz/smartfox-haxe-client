@@ -1,4 +1,4 @@
-﻿package com.smartfoxserver.v2.bitswarm.wsocket;
+package com.smartfoxserver.v2.bitswarm.wsocket;
 
 import openfl.events.Event;
 import openfl.Lib;
@@ -70,7 +70,7 @@ class WSClient extends EventDispatcher
 				data : ByteArray.fromBytes(bytes)
 			}));
 		};
-		ws.onclose = function() {
+		ws.onclose = function(?e:Null<Dynamic>) {
             if(!_connected)
                 return;
 			_connected = false;
