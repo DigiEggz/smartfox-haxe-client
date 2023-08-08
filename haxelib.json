@@ -5,16 +5,16 @@
         "openfl",
         "server"
     ],
-    "description": "Unofficial SmartFox client API",
+    "description": "Unofficial Haxe client for SmartFoxServer 2X 🦊",
     "contributors": [
         "boorik <Vincent Blanchet>",
 		"barisyild <Baris Cagri Yildirim>",
         "dpomier <Dimitri Pomier>",
-        "Metlmeta"
+        "DigiEggz"
     ],
-    "releasenote": "Encryption support",
-    "version": "0.2.4",
-    "url": "https://github.com/Metlmeta/smartfox-haxe-client",
+    "releasenote": "First stable release",
+    "version": "1.0.0",
+    "url": "https://github.com/DigiEggz/smartfox-haxe-client",
     "dependencies": {
 		"crypto":"",
 		"colyseus-websocket":"",
