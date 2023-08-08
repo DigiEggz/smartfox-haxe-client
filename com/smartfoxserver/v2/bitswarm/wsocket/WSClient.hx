@@ -97,7 +97,7 @@ class WSClient extends EventDispatcher
 		ws.sendBytes(binData);
 	}
 
-	public function close() : Void
+	public function close(manual:Bool = false) : Void
 	{
         _connected = false;
         ws.close();
