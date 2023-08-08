@@ -2,22 +2,22 @@
     "name": "smartfox-haxe-client",
     "license": "MIT",
     "tags": [
-        "smartfox",
-        "server",
-	"openfl"
+        "openfl",
+        "server"
     ],
-    "description": "Unofficial Haxe client for SmartFoxServer 2X",
+    "description": "Unofficial SmartFox client API",
     "contributors": [
-	"DigiEggz",
-	"barisyild",
-        "dpomier"
+        "boorik <Vincent Blanchet>",
+		"barisyild <Baris Cagri Yildirim>",
+        "dpomier <Dimitri Pomier>",
+        "Metlmeta"
     ],
-    "releasenote": "First stable release",
-    "version": "1.0.0",
-    "url": "https://github.com/DigiEggz/smartfox-haxe-client",
+    "releasenote": "Encryption support",
+    "version": "0.2.4",
+    "url": "https://github.com/Metlmeta/smartfox-haxe-client",
     "dependencies": {
-	"crypto":"",
-	"colyseus-websocket":"",
+		"crypto":"",
+		"colyseus-websocket":"",
         "openfl":""
     }
 }
