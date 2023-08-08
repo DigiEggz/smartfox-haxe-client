@@ -1,51 +1,55 @@
-
 SmartFoxServer 2X Haxe Client API   
 ======================= 
 
-Haxe openfl translation of the as3 client for the Smartfox server http://www.smartfoxserver.com/
+This fork adds support for encrypted connections + other improvements. Pull requests are welcome!
 
-Tested on flash, windows, ios and android targets.
-
-You can have a look at https://github.com/boorik/smartfox-haxe-fullstack to check a sample project that use the api and haxe all the way.
-
-Pull requests are welcome
-
-Let me know how it works on other targets
-
-Haxe OpenFL translation of the as3 client for the Smartfox server http://www.smartfoxserver.com/    
+|Platform|Support|
+|--|--|
+|HTML5|WS/WSS|
+|Flash|WS/WSS/Socket/BlueBox|
+|Adobe AIR|WS/Socket/BlueBox|
+|Windows|WS/WSS/Socket/BlueBox|
+|Linux|Untested|
+|macOS|Socket/BlueBox|
+|Android|Untested|
+|iOS|Socket/BlueBox|
+|Neko|Socket/BlueBox|
+|Emscripten|Untested|
 
 CURRENTLY WORKING WITH :  
 ----------------------------------  
 
-haxe: 4.0.5  
+haxe: 4.2.2
     
-lime: 7.6.3   
+lime: 7.9.0  
     
-openfl: 8.9.5  
+openfl: 9.1.0  
     
-haxe-crypto: 0.0.7    
+crypto: 1.0.2  
   
-colyseus-websocket: 1.0.10  
+colyseus-websocket: 1.0.10
     
 ----------------------------------    
     
-Instructions:  
+Instructions
 =====  
-Installation
- 
+Installation: 
 ```
-haxelib git smartfox-haxe-client https://github.com/boorik/smartfox-haxe-client
-```
-add in your project.xml :
+haxelib git smartfox-haxe-client https://github.com/barisyild/smartfox-haxe-client.git
+```    
+
+Add the following line to your project.xml:    
 ```
 <haxelib name="smartfox-haxe-client"/>
 ```
-Then you can use it like the as3 api, check the as3 exemples there :    
+Usage is very similar to the AS3 API. Check out AS3 examples here:    
 http://docs2x.smartfoxserver.com/ExamplesFlash/introduction    
   
 TODO:  
 ====
-* test app    
+* test app   
 * improve typing
-* make it framework agnostic pure haxe without openfl dependency
-* make it work with html5 target
+
+Contributors
+====
+A special thanks to **Vincent Blanchet** for the [original port](https://github.com/boorik/smartfox-haxe-client) and to everyone else who has helped make this project what it is.
