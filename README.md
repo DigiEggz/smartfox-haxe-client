@@ -13,7 +13,7 @@ Platforms
 |Windows|WS/WSS/Socket/BlueBox|
 |Linux|Untested|
 |macOS|Socket/BlueBox|
-|Android|Untested|
+|Android|Socket/BlueBox|
 |iOS|Socket/BlueBox|
 |Neko|Socket/BlueBox|
 |Emscripten|Untested|
