@@ -30,7 +30,7 @@ class ConfigLoader extends EventDispatcher
 	{
 		var loader:URLLoader = cast evt.target;
 		var xmlDoc:Xml = Xml.parse(loader.data);
-		var fastDoc:haxe.xml.Fast = new haxe.xml.Fast(xmlDoc);
+		var fastDoc:haxe.xml.Access = new haxe.xml.Access(xmlDoc);
 		var cfgData:ConfigData = new ConfigData();
 		
 		cfgData.host = fastDoc.att.ip;
