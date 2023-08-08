@@ -18,7 +18,7 @@ Platforms
 |Neko|Socket/BlueBox|
 |Emscripten|Untested|
 
-CURRENTLY WORKING WITH :  
+Currently works with:  
 ----------------------------------  
 
 haxe: 4.2.2
@@ -37,7 +37,7 @@ Instructions
 =====  
 Installation: 
 ```
-haxelib git smartfox-haxe-client https://github.com/barisyild/smartfox-haxe-client.git
+haxelib git smartfox-haxe-client https://github.com/Metlmeta/smartfox-haxe-client.git
 ```    
 
 Add the following line to your project.xml:    
