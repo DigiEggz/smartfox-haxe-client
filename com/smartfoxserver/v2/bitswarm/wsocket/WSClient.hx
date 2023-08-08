@@ -1,4 +1,4 @@
-﻿package com.smartfoxserver.v2.bitswarm.wsocket;
+package com.smartfoxserver.v2.bitswarm.wsocket;
 
 import openfl.events.Event;
 import openfl.Lib;
@@ -102,4 +102,3 @@ class WSClient extends EventDispatcher
 		ws.close();
 	}
 }
-

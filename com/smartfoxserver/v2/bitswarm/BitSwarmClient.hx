@@ -488,7 +488,7 @@ class BitSwarmClient extends EventDispatcher
 			* reconnection to the server.
 			*/
 			_attemptingReconnection = true;
-			_firstReconnAttempt=haxe.Timer.stamp();
+			_firstReconnAttempt = haxe.Timer.stamp() * 1000;
 			_reconnCounter=1;
 
 			// Fire event and retry
@@ -503,8 +503,8 @@ class BitSwarmClient extends EventDispatcher
 		if(!_attemptingReconnection)
 			return;
 
-		var reconnectionSeconds:Int=sfs.getReconnectionSeconds()* 1000;
-		var now:Float=haxe.Timer.stamp();
+		var reconnectionSeconds:Int = sfs.getReconnectionSeconds() * 1000;
+		var now:Float = haxe.Timer.stamp() * 1000;
 		var timeLeft:Float=(_firstReconnAttempt + reconnectionSeconds)- now;
 
 		if(timeLeft>0)
@@ -562,6 +562,13 @@ class BitSwarmClient extends EventDispatcher
 
 	private function processIOError(error:String):Void
 	{
+		// Reconnection failure
+		if(_attemptingReconnection)
+		{
+			reconnect();
+			return;
+		}
+
 		trace("## SocketError:" + error);
 		var event:BitSwarmEvent = new BitSwarmEvent(BitSwarmEvent.IO_ERROR);
 		event.params = {
