@@ -154,7 +154,7 @@ class BitSwarmClient extends EventDispatcher
 
 	public function forceBlueBox(value:Bool):Void
 	{
-		if(!connected)
+		if(!connected || _attemptingReconnection)
 			_useBlueBox = value;
 		else
 			throw new IllegalOperationError("You can't change the BlueBox mode while the connection is running");
@@ -627,8 +627,8 @@ class BitSwarmClient extends EventDispatcher
 	{
 		processIOError(evt.toString());
 
-		// Android _socket not receiving Event.CLOSE; manually disconnect on I/O error
-		#if android
+		// Android and HashLink _socket not receiving Event.CLOSE; manually disconnect on I/O error
+		#if (android || hl)
 		disconnect();
 		#end
 	}
@@ -674,8 +674,10 @@ class BitSwarmClient extends EventDispatcher
 		trace("## BlueBox Dynamic:" + evt.params.message);
 		var event:BitSwarmEvent = new BitSwarmEvent(BitSwarmEvent.IO_ERROR);
 		event.params = { message:evt.params.message };
-
-		dispatchEvent(event);
+		
+		
+		//dispatchEvent(event);
+		onBBDisconnect(evt);
 	}
 
 	function get_connectionPort():Int

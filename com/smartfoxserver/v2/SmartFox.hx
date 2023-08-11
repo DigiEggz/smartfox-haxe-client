@@ -2214,9 +2214,10 @@ class SmartFox extends EventDispatcher
 	
 	private function handleConnectionProblem(evt:BitSwarmEvent):Void
 	{
-		// Socket failed, attempt using the BBox
+		// Socket failed, attempt using BlueBox
 		if(_bitSwarm.connectionMode==ConnectionMode.SOCKET && _useBlueBox)
 		{
+			_bitSwarm.disconnect();
 			_bitSwarm.forceBlueBox(true);
 			var bbPort:Int = config != null ? config.httpPort:DEFAULT_HTTP_PORT;
 				
