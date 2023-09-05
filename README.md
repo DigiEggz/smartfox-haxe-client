@@ -16,7 +16,7 @@ Platforms
 |Android|Socket/BlueBox|
 |iOS|Socket/BlueBox|
 |Neko|Socket/BlueBox|
-|Emscripten|Untested|
+|HashLink|Socket/BlueBox|
 
 Instructions
 =====  
