@@ -4,16 +4,18 @@
     "tags": [
         "smartfox",
         "server",
-	"openfl"
+	"openfl",
+	"smartfoxserver",
+	"SFS2X"
     ],
-    "description": "Unofficial Haxe client for SmartFoxServer 2X",
+    "description": "SmartFoxServer 2X Haxe client with encryption support",
     "contributors": [
 	"DigiEggz",
 	"barisyild",
         "dpomier"
     ],
-    "releasenote": "Stability improvements",
-    "version": "1.0.1",
+    "releasenote": "Client info improvements,
+    "version": "1.1.0",
     "url": "https://github.com/DigiEggz/smartfox-haxe-client",
     "dependencies": {
 	"crypto":"",
