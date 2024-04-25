@@ -14,7 +14,7 @@
 	"barisyild",
         "dpomier"
     ],
-    "releasenote": "Client info improvements,
+    "releasenote": "Client info improvements",
     "version": "1.1.0",
     "url": "https://github.com/DigiEggz/smartfox-haxe-client",
     "dependencies": {
