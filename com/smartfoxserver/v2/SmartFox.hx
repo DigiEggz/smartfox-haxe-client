@@ -881,8 +881,6 @@ class SmartFox extends EventDispatcher
 	private var _clientDetails:String =
 	#if flash
  	"Flash"
-	#elseif neko
-	"Neko"
 	#elseif linux
 	"Linux"
 	#elseif windows
@@ -897,6 +895,12 @@ class SmartFox extends EventDispatcher
 	"JavaScript"
 	#else
 	"Unknown"
+	#end
+	// Append VM type, if any
+	#if hl
+	+ " (HashLink)"
+	#elseif neko
+	+ " (Neko)"
 	#end
 	;	
 	
